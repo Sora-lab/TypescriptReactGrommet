@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import { MDCTab } from '@material/tab';
 import { MDCTabBar } from '@material/tab-bar';
-import {MDCTabScroller} from '@material/tab-scroller';
+import { MDCTabScroller } from '@material/tab-scroller';
+
+interface Tabs {
+    tab: HTMLElement | null;
+    tabBar: HTMLElement | null;
+    tabScroller: HTMLElement | null;
+}
+
+interface Props {
+    readonly tabindex: string;
+}
 class Tabs extends Component {
     constructor(props: any) {
         super(props);
         this.tab = null;
+        this.tabBar = null;
+        this.tabScroller = null;
     }
     componentDidMount() {
         this.tab = new MDCTab(document.querySelector('.mdc-tab'));
@@ -14,6 +26,7 @@ class Tabs extends Component {
     }
     //TODO: pass on which tabs will be loaded 
     render(){
+        
         return (
             <div className="mdc-tab-bar" role="tablist">
                 <div className="mdc-tab-scroller">
@@ -40,11 +53,4 @@ class Tabs extends Component {
             </div>
         )
     }
-}
-
-// TODO: figure out what this type could be? 
-interface Tabs {
-    tab: any;
-    tabBar: any;
-    tabScroller: any;
 }

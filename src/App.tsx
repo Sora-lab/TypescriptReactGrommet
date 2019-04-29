@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grommet } from 'grommet';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <Grommet plain>
       hello!
-    </div>
+    </Grommet>
   );
 }
 

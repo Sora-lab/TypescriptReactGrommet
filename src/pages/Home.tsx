@@ -1,17 +1,20 @@
-import * as React from 'react';
+import React, { Component } from 'react';
+import { string } from 'prop-types';
 
 
 interface State {
     realName: string;
     userID: string;
-    
-}
 
-class Home extends React.Component<State>{
-    constructor(props: any){
+}
+interface Props {
+    props: any;
+}
+class Home extends Component<State, Props>{
+    constructor(props: Props){
         super(props);
         this.state = {
-            foo: 'woo'
+            realName: "hawhouaw",
         };
     };
 }
