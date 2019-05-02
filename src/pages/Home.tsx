@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import fetchProfile from '../utils/fetch';
+import { fetchProfile, fetchNarratives} from '../utils/fetch';
 import GrommetTabs from '../components/GrommetTabs';
 // Use Global theme - Font size, Brand Color
 
