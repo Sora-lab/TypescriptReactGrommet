@@ -29,10 +29,9 @@ const Profile = (props:Props) => {
     if(profile.affiliations[0]){
         affiliations = profile.affiliations[0];
         researchInterests = profile.researchInterests
-        console.log('profile render', profile.researchInterests)
     }
     return(
-        <Box wrap overflow='auto' pad='medium' direction='row'>
+        <Box wrap overflow='auto' direction='row'>
             <Box overflow='auto' margin='small' pad='small' height='small' width='small'>
                 <Image src="https://www.gravatar.com/avatar/4210d8e14db97e647b8cedc9fa3c4119?s=500&amp;r=pg&d=monsterid" fit="contain" />
             </Box>
