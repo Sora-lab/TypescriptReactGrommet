@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image } from 'grommet';
+import { Box, Image, Text } from 'grommet';
 
 interface Props {
     userName: {
@@ -35,8 +35,8 @@ const Profile = (props:Props) => {
             <Box overflow='auto' margin='small' pad='small' height='small' width='small'>
                 <Image src="https://www.gravatar.com/avatar/4210d8e14db97e647b8cedc9fa3c4119?s=500&amp;r=pg&d=monsterid" fit="contain" />
             </Box>
-            <Box overflow='auto' margin='small' pad='small' width='medium' elevation='xsmall'><h2>Position</h2> <h4>Title:</h4>{ profile.jobTitleOther}<h4>organization:</h4>{ profile.organization} <h4>Department:</h4>{ profile.department}</Box>
-            <Box overflow='auto' margin='small' pad='small' width='medium' elevation='xsmall'><h2>Research Interests</h2><ul><li>{researchInterests[0]}</li><li>{researchInterests[1]}</li><li>{researchInterests[2]}</li></ul></Box>
+            <Box overflow='auto' margin='small' pad='small' width='medium' elevation='xsmall'><Text size='xlarge' weight='bold'>Position</Text> <Text size='medium' weight='bold'>Title:</Text>{ profile.jobTitleOther}<h4>organization:</h4>{ profile.organization} <h4>Department:</h4>{ profile.department}</Box>
+            <Box overflow='auto' margin='small' pad='small' width='medium' elevation='xsmall'><Text size='xlarge' weight='bold'>Research Interests</Text><ul><li>{researchInterests[0]}</li><li>{researchInterests[1]}</li><li>{researchInterests[2]}</li></ul></Box>
             <Box overflow='auto' margin='small' pad='small' width='medium' elevation='xsmall'><h2>Affiliations</h2> As { affiliations.title } ({ affiliations.started }-present) at {affiliations.organization}</Box>
             <Box overflow='auto' margin='small' pad='small' width='large' elevation='xsmall'><h2>Research or personal statement</h2> { profile.researchStatement }</Box>
             <Box overflow='auto' margin='small' pad='small' elevation='xsmall'><h2>Research or personal statement</h2> { profile.researchStatement }</Box>

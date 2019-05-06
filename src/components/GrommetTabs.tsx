@@ -8,6 +8,7 @@ import Narratives from '../components/Narratives'
 interface narrativeData {
     wsID: string; name: string; last_saved: string;
 }
+
 interface Props {
     data: {
         tabTitle: Array<string>;
@@ -44,7 +45,7 @@ const GrommetTabs = (props: Props) => {
                 <Box overflow='auto' margin='small' pad='small'><Profile userName={data.userName} userProfile={data.userProfile} /></Box>
             </Tab>
             <Tab title={data.tabTitle[1]}>
-                <Box overflow='auto' margin='small' pad='small'><Narratives narrativeList={data.narratives}/></Box>
+                <Box overflow='auto' margin='small' pad='small'><Narratives narratives={data.narratives}/></Box>
             </Tab>
             <Tab title={data.tabTitle[2]}>
                 <Box overflow='auto' margin='small' pad='small'>something something</Box>

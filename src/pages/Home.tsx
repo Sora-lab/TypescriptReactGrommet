@@ -5,6 +5,9 @@ import { Grid, Box, Button } from 'grommet';
 
 // Use Global theme - Font size, Brand Color
 
+interface narrativeData {
+    wsID: string; name: string; last_saved: string;
+}
 interface State {
     tabTitle: Array<string>;
     userName: {
@@ -24,8 +27,7 @@ interface State {
         jobTitleOther: string;
         researchInterests: Array<any>;
     };
-    //narratives: narrativeData[];
-    narratives: Array<any>;
+    narratives: Array<narrativeData>;
 }
 
 class Home extends Component<any, State> {
@@ -53,7 +55,7 @@ class Home extends Component<any, State> {
             narratives: []
         }
     }
-
+    
     componentDidMount(){
         fetchProfile()
         .then((response:{version: string, result:Array<any>})=>{
